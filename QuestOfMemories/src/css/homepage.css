@@ -1,0 +1,90 @@
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(-4%);
+        animation-timing-function: cubic-bezier(0.5, 0, 1, 1);
+    }
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-float {
+    animation: float 1.5s ease-in-out infinite;
+}
+
+.textbox {
+    font-family: "textbox";
+}
+
+.gameboy {
+    font-family: "gameboy";
+}
+
+.intro {
+    font-family: "intro";
+}
+
+.startBtn {
+    color: #e70c0c;
+    text-shadow: 2px 2px 0px #fff, -2px -2px 0px #fff;
+    background-color: transparent;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.startBtn:hover {
+    color: #ffcc00;
+    text-shadow: 2px 2px 0px #fff, -2px -2px 0px #fff;
+    /* border-color: #ffcc00; */
+}
+
+.startBtn:active {
+    color: #ff9900;
+    text-shadow: 1px 1px 2px #fff;
+    transform: scale(0.98);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.characterName {
+    font-family: gameboy;
+    color: #fbbe08;
+    text-shadow: 2px 2px 0px #ffffff, -2px -2px 0px #ffffff;
+    background-color: transparent;
+    font-size: 1.15rem;
+}
